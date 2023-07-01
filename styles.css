@@ -1,6 +1,7 @@
 * {
   padding: 0px;
   margin: 0px;
+  box-sizing: border-box;
 }
 
 body {
@@ -130,7 +131,8 @@ input:focus {
 
 .card {
   display: inline-block;
-  width: 175px;
+  /* width: 175px; */
+  width: 200px;
   padding: 0px 10px;
   margin: 10px;
   box-shadow: rgba(0, 0, 0, 0.04) 2px 2px 8px;
@@ -138,7 +140,7 @@ input:focus {
 
 .add-btn {
   cursor: pointer;
-  width: 66px;
+  width: 66px !important;
   border: 1px solid rgb(49, 134, 22);
   height: 31px;
   color: rgb(49, 134, 22);
@@ -370,16 +372,76 @@ input:focus {
   display: none;
 }
 
-@media (max-width: 768px) {
+.mob-nav {
+  display: none;
+}
+
+.card .row {
+  display: flex !important;
+  justify-content: space-between !important;
+  margin-right: 5px;
+}
+
+@media (max-width: 1025px) {
+  .my-navbar {
+    display: none;
+  }
+  .mob-nav {
+    display: block;
+  }
   .footer {
     display: none;
   }
 
+  .catagory-row {
+    margin: 0px;
+    padding: 0px;
+  }
   .responsive-img {
     display: block;
   }
 
+  .wrapper {
+    max-width: 100vw;
+  }
+
+  .card {
+    margin: auto;
+    margin-top: 10px;
+  }
+
   .hero-1 {
     display: none;
+  }
+  .carousel {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .wrapper i:last-child {
+    display: none;
+  }
+  .price s {
+    margin-left: 0.3rem;
+  }
+
+  .card .price {
+    display: flex;
+  }
+
+  .price {
+    padding: 0 !important;
+  }
+
+  .add-btn {
+    width: 66px !important;
+    /* padding: 0px !important; */
+    margin-bottom: 10px;
+  }
+
+  .card .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto;
   }
 }
